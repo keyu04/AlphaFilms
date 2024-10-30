@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>α alpha films </title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none';"> -->
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel='stylesheet' id='wpo_min-header-0-css'
+        href='https://shaadicam.in/wp-content/cache/wpo-minify/1721495446/assets/wpo-minify-header-33279ab5.min.css'
+        media='all' />
+    <script src="https://shaadicam.in/wp-content/cache/wpo-minify/1721495446/assets/wpo-minify-header-f5440c18.min.js"
+        id="wpo_min-header-1-js"></script>
+    <style>
+        body {
+            margin: 0;
+            /* Removed overflow: hidden to allow scrolling */
+        }
+
+        #menu-toggle {
+            position: absolute;
+            top: 1rem;
+            /* Adjust this value as needed */
+            right: 1rem;
+            /* Right side */
+        }
+    </style>
+    <style type="text/tailwindcss">
+        @layer base {
+            :root {
+                --background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+            }
+            .dark {
+                --background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+            }
+        }
+        
+    </style>
+    <script type="text/javascript">
+        window.tailwind.config = {
+            darkMode: ['class'],
+            theme: {
+                extend: {
+                    colors: {
+                        border: 'hsl(var(--border))',
+                        input: 'hsl(var(--input))',
+                        ring: 'hsl(var(--ring))',
+                        background: 'hsl(var(--background))',
+                        foreground: 'hsl(var(--foreground))',
+                        primary: {
+                            DEFAULT: 'hsl(var(--primary))',
+                            foreground: 'hsl(var(--primary-foreground))'
+                        },
+                        secondary: {
+                            DEFAULT: 'hsl(var(--secondary))',
+                            foreground: 'hsl(var(--secondary-foreground))'
+                        },
+                        destructive: {
+                            DEFAULT: 'hsl(var(--destructive))',
+                            foreground: 'hsl(var(--destructive-foreground))'
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(var(--muted))',
+                            foreground: 'hsl(var(--muted-foreground))'
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(var(--accent))',
+                            foreground: 'hsl(var(--accent-foreground))'
+                        },
+                        popover: {
+                            DEFAULT: 'hsl(var(--popover))',
+                            foreground: 'hsl(var(--popover-foreground))'
+                        },
+                        card: {
+                            DEFAULT: 'hsl(var(--card))',
+                            foreground: 'hsl(var(--card-foreground))'
+                        },
+                    },
+                }
+            }
+        }
+
+    </script>
+    <script>
+        function sendWhatsAppMessage(event) {
+            event.preventDefault();  // Prevent form submission
+
+            //let phone = document.getElementById("phone").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            // Ensure the phone number contains only digits and is 10 digits long
+            const phonePattern = /^\d{10}$/;  // 10-digit phone number for India
+
+            //if (phonePattern.test(phone) && 
+            if (message.length > 0) {
+                // Prepend country code +91 to the phone number
+                phone = '91' + '9712082463';
+
+                // Encode message to make it URL-safe
+                message = encodeURIComponent(message);
+
+                // Create the WhatsApp URL
+                const url = `https://wa.me/${phone}?text=${message}`;
+
+                // Redirect to WhatsApp (opens WhatsApp with the message pre-filled)
+                window.location.href = url;
+            } else {
+                // if (!phonePattern.test(phone)) {
+                //  alert("Please enter a valid 10-digit phone number.");
+                //} else
+                if (message.length === 0) {
+                    alert("Message cannot be empty.");
+                }
+                //}
+            }
+        }
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menu-toggle');
+            const menu = document.getElementById('menu');
+
+            menuToggle.addEventListener('click', () => {
+                // Toggle menu visibility
+                if (menu.classList.contains('hidden')) {
+                    menu.classList.remove('hidden');
+                    menu.classList.add('flex');
+                    menuToggle.innerHTML = '&#x2715;';  // "X" symbol
+                } else {
+                    menu.classList.add('hidden');
+                    menu.classList.remove('flex');
+                    menuToggle.innerHTML = '☰';  // Change back to menu icon
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="relative bg-background">
+        <header class="flex justify-between items-center p-4 bg-primary text-primary-foreground">
+            <div class="text-xl font-bold"><span class="text-3xl">α</span> Films</div>
+            <div class="flex space-x-4">
+                <div class="flex items-center">
+                    <button id="menu-toggle" class="lg:hidden block text-2xl focus:outline-none">☰</button>
+                    <nav id="menu"
+                        class="hidden lg:flex flex-col lg:flex-row lg:space-x-6 space-y-4 lg:space-y-0 mt-4 lg:mt-0">
+                        <a href="" class="text-gray hover:text-gray-400 transition duration-300">Home</a>
+                        <a href="#teams" class="text-gray hover:text-gray-400 transition duration-300">About Us</a>
+                        <a href="#aboutus" class="text-gray hover:text-gray-400 transition duration-300">Contact Us</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Full Page Slider -->
+        <div class="relative w-full h-screen overflow-hidden" id="slider-container">
+            <!-- Image Slider -->
+            <div class="absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100 slider-img">
+                <img src="./images/background/1.JPG" alt="Slide 1" class="object-cover w-full h-full" />
+            </div>
+            <div class="absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 slider-img">
+                <img src="./images/background/2.JPG" alt="Slide 2" class="object-cover w-full h-full" />
+            </div>
+            <div class="absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 slider-img">
+                <img src="./images/background/3.JPG" alt="Slide 3" class="object-cover w-full h-full" />
+            </div>
+
+            <!-- Overlay Text -->
+            <div
+                class="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black bg-opacity-50">
+                <h1 class="text-white text-4xl font-bold">Capture Your Best Moments</h1>
+                <p class="mt-2 text-lg">Let us help you preserve your precious moments with our expert photography
+                    services in Tapi, Gujarat.</p>
+                <a href="#pdfs"
+                    class="mt-4 px-6 py-2 bg-secondary text-secondary-foreground rounded hover:bg-secondary/80">Check
+                    Out Gallery</a>
+
+                <!-- <div class="absolute top-2/3 flex justify-center w-full">
+                    <button
+                        class="text-white text-3xl  mx-2 focus:outline text-secondary-foreground rounded-full hover:bg-secondary/10 px-5 py-2">
+                        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button
+                        class="text-white text-3xl  mx-2 focus:outline text-secondary-foreground rounded-full hover:bg-secondary/10 px-5 py-2">
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="entry-content clear" itemprop="text" id="pdfs">
+            <div data-elementor-type="wp-page" data-elementor-id="760" class="elementor elementor-760">
+                <div class="elementor-element elementor-element-4f598d1 e-con-full e-flex e-con e-parent"
+                    data-id="4f598d1" data-element_type="container">
+                    <div class="elementor-element elementor-element-f2edbfe elementor-widget elementor-widget-shortcode"
+                        data-id="f2edbfe" data-element_type="widget" data-widget_type="shortcode.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-shortcode">
+                                <div class="_df_book df-lite" id="df_04" _slug="e-album_demo" data-title="e-album_demo"
+                                    wpoptions="true" thumbtype=""></div>
+                                <script class="df-shortcode-script" type="application/javascript">
+                                    window.option_df_04 = {
+                                        "outline": [],
+                                        "autoEnableOutline": "false",
+                                        "autoEnableThumbnail": "false",
+                                        "overwritePDFOutline": "false",
+                                        "direction": "1",
+                                        "pageSize": "0",
+                                        "source": "./pdf/wedding.pdf",
+                                        "wpOptions": "true"
+                                    };
+                                    if (window.DFLIP && window.DFLIP.parseBooks) {
+                                        window.DFLIP.parseBooks();
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Gallery 400 X 300 images-->
+        <!-- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-background">
+            <div class="relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <img src="./images/g1.jpg" alt="Image 1"
+                    class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-80" />
+            </div>
+            <div class="relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <img src="./images/g2.jpg" alt="Image 2"
+                    class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-80" />
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <img src="./images/g3.jpg" alt="Image 3"
+                    class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-80" />
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <img src="./images/g4.jpg" alt="Image 4"
+                    class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-80" />
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <img src="./images/g5.jpg" alt="Image 5"
+                    class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-80" />
+            </div>
+
+            <div class="relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <img src="./images/g6.jpg" alt="Image 6"
+                    class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-80" />
+            </div>
+        </div> -->
+
+        <div class="bg-gray-100 p-8 m-5 md:flex md:justify-between md:items-center rounded-lg shadow-2xl opacity-75">
+            <div class="md:w-1/2">
+                <h1 class="text-6xl font-extrabold text-primary mb-2">HELLO</h1>
+                <h2 class="text-4xl font-light text-muted-foreground mb-4">Your Narrative Start Now
+                </h2>
+                <p class="text-lg text-muted-foreground mb-6">
+                    we are more than just photographer or videographer; we are storytellers who roam the world in search
+                    of light and inspiration.
+                </p>
+                <!-- <button
+                    class="mt-4 bg-primary text-primary-foreground hover:bg-primary/80 px-6 py-3 rounded-lg transition duration-300 shadow-md">Learn
+                    More</button> -->
+            </div>
+            <div class="md:w-1/2 mt-4 md:mt-0">
+                <p class="text-lg text-muted-foreground mb-4">
+                    Our passion lies in creating visual narratives that defy convention,
+                    celebrating the beauty of each unique love story.
+                    We believe in the art of storytelling without boundaries, crafting wedding films that resonate with
+                    authenticity and emotion. Our approach is a harmonious blend of tradition and modernity, where
+                    stunning visuals meet innovative techniques to create a captivating experience.
+                    Every film we create is a labor of love, meticulously designed to reflect the essence of each
+                    couple. We take the time to understand your journey, ensuring that your story is told in a way that
+                    is genuine and unforgettable.
+                </p>
+                <p class="mt-4 text-lg font-bold text-primary">- alphafilms </p>
+            </div>
+        </div>
+
+        <div
+            class="flex flex-col md:flex-row bg-background p-8 m-5 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            <div class="md:w-1/2 relative">
+                <video autoplay loop controls muted
+                    class="w-full h-auto rounded-lg shadow-md transform hover:rotate-3 transition-transform duration-500">
+                    <source src="./video/Sequence 01_1.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+
+            </div>
+            <div class="md:w-1/2 md:pl-8 flex flex-col justify-center">
+                <h2 class="text-5xl font-extrabold text-primary mb-2 mt-3 animate-bounce">OUR FILMING STYLE </h2>
+                <h3 class="text-2xl text-muted-foreground mb-4 italic">YOU'VE GOT THE LOVE</h3>
+                <p class="mt-4 text-muted-foreground leading-relaxed">
+                    Our films are documentary, cinematic, traditional & storytelling. Here, what to know about each and
+                    pros and cons to keep in mind. A documentary-style videographer will have an utterly hands-off style
+                    of filmmaking.
+
+                </p>
+                <!-- <button
+                    class="mt-6 bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors py-3 px-6 rounded-lg shadow-lg transform hover:scale-110 duration-300">LEARN
+                    MORE</button> -->
+            </div>
+        </div>
+
+        <div class="relative w-full max-w-screen mx-auto bg-card rounded-lg shadow-lg overflow-hidden">
+            <!-- Added the 'controls' attribute for default video controls -->
+            <div class="bg-card text-card-foreground p-6 rounded-lg shadow-lg w-full">
+                <video id="videoPlayer" class="w-full h-full" controls>
+                    <source src="./video/Teaser.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Play Button (Font Awesome Icon) -->
+                <button id="playButton"
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-6xl opacity-100 transition-opacity duration-300">
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+
+        <section class="py-16 pt-5 bg-background">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-extrabold mb-4">SEE OUR WORK</h2>
+                <h3 class="text-3xl font-semibold mb-6">BRIDE'S OF ALPHAFILMS </h3>
+                <p class="text-muted-foreground mb-12 max-w-2xl mx-auto">
+                    The bride is not just a client to alpha films she’s like a friendly, emotional connection, akin to
+                    family. We cherish the bond we create with each bride, ensuring that her special day is not just an
+                    event but a cherished memory that lasts a lifetime.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 mx-12">
+                    <div class="bg-card p-4">
+                        <div class="grid grid-cols-1 gap-7">
+                            <img src="./images/brides/1.jpg" class="w-full h-auto " />
+                            <img src="./images/brides/2.jpg" class="w-full h-auto" />
+                            <img src="./images/brides/3.jpg" class="w-full h-auto" />
+                            <img src="./images/brides/4.JPG" class="w-full h-auto" />
+                            <img src="./images/brides/5.JPG" class="w-full h-auto" />
+                            <img src="./images/brides/6.jpg" class="w-full h-auto" />
+                            <img src="./images/brides/7.jpg" class="w-full h-auto " />
+                        </div>
+                    </div>
+                    <div class="bg-card p-4">
+                        <div class="grid grid-cols-1 gap-7">
+                            <img src="./images/brides/8.jpg" class="w-full h-auto" />
+                            <img src="./images/brides/9.jpg" class="w-full h-auto" />
+                            <img src="./images/brides/10.JPG" class="w-full h-auto" />
+                            <img src="./images/brides/11.jpg" class="w-full h-auto" />
+                            <img src="./images/brides/12.jpg" class="w-full h-auto " />
+                            <img src="./images/brides/13.jpg" class="w-full h-auto " />
+                            <img src="./images/brides/14.jpg" class="w-full h-auto" />
+                        </div>
+                    </div>
+                    <div class="bg-card p-4">
+                        <div class="grid grid-cols-1 gap-8">
+                            <img src="./images/brides/15.jpg" class="w-full h-auto " />
+                            <img src="./images/brides/16.jpg" class="w-full h-auto " />
+                            <img src="./images/brides/17.jpg" class="w-full h-auto" />
+                            <img src="./images/brides/18.jpg" class="w-full h-auto" />
+                            <img src="./images/brides/19.jpg" class="w-full h-auto" />
+                            <img src="./images/brides/20.jpg" class="w-full h-auto" />
+                            <img src="./images/brides/21.jpg" class="w-full h-auto" />
+                            <img src="./images/brides/22.jpg" class="w-full h-auto" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="pt-2 bg-background">
+            <div class="container mx-auto text-center">
+                <h3 class="text-3xl font-semibold mb-6">COUPLES OF ALPHAFILMS </h3>
+                <p class="text-muted-foreground mb-12 max-w-2xl mx-auto">
+                    The bond with the couple is heartfelt and genuine, transcending the professional relationship. They
+                    become an integral part of our alpha films family, and we strive to make their wedding experience as
+                    warm, friendly, and emotionally enriching as possible. Their trust in us is not just an honor but a
+                    testament to the close-knit relationships we build with those we work with.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 mx-12">
+                    <div class="bg-card p-4">
+                        <div class="grid grid-cols-1 gap-5">
+                            <img src="./images/couples/1.jpg" class="w-full h-auto " />
+                            <img src="./images/couples/2.jpg" class="w-full h-auto" />
+                            <img src="./images/couples/3.jpg" class="w-full h-auto" />
+                            <img src="./images/couples/4.JPG" class="w-full h-auto" />
+                            <img src="./images/couples/5.JPG" class="w-full h-auto" />
+                        </div>
+                    </div>
+                    <div class="bg-card p-4">
+                        <div class="grid grid-cols-1 gap-8">
+                            <img src="./images/couples/6.jpg" class="w-full h-auto" />
+                            <img src="./images/couples/7.jpg" class="w-full h-auto " />
+                            <img src="./images/couples/8.jpg" class="w-full h-auto" />
+                            <img src="./images/couples/9.jpg" class="w-full h-auto" />
+                            <img src="./images/couples/10.JPG" class="w-full h-auto" />
+                            <img src="./images/couples/11.jpg" class="w-full h-auto" />
+                            <img src="./images/couples/12.jpg" class="w-full h-auto " />
+                            <img src="./images/couples/13.jpg" class="w-full h-auto " />
+                        </div>
+                    </div>
+                    <div class="bg-card p-4">
+                        <div class="grid grid-cols-1 gap-5">
+                            <img src="./images/couples/14.jpg" class="w-full h-auto" />
+                            <img src="./images/couples/15.jpg" class="w-full h-auto " />
+                            <img src="./images/couples/16.jpg" class="w-full h-auto " />
+                            <img src="./images/couples/17.jpg" class="w-full h-auto" />
+                            <img src="./images/couples/18.jpg" class="w-full h-auto" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-2 bg-background">
+            <div class="container mx-auto text-center">
+                <h3 class="text-3xl font-semibold mb-6">THE PRE-WEDDING NARRATIVES</h3>
+                <p class="text-muted-foreground mb-12 max-w-2xl mx-auto">
+                     we create are not just about the moments captured, but the emotions and love that shine through.
+                    Each story is a unique reflection of the couple’s journey, filled with laughter, joy, and the
+                    promise of a lifetime together. We take pride in creating films that not only capture these special
+                    moments but also serve as a timeless reminder of the love they share.
+
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 mx-12">
+                    <div class="bg-card p-4">
+                        <div class="grid grid-cols-1 gap-5">
+                            <img src="./images/pre-wedding/1.jpg" class="w-full h-auto" />
+                            <img src="./images/pre-wedding/2.jpg" class="w-full h-auto" />
+                            <img src="./images/pre-wedding/3.jpg" class="w-full h-auto" />
+                            <img src="./images/pre-wedding/4.jpg" class="w-full h-auto" />
+                            <img src="./images/pre-wedding/5.jpg" class="w-full h-auto" />
+                        </div>
+                    </div>
+                    <div class="bg-card p-4">
+                        <div class="grid grid-cols-1 gap-5">
+                            <img src="./images/pre-wedding/6.jpg" class="w-full h-auto" />
+                            <img src="./images/pre-wedding/7.jpg" class="w-full h-auto" />
+                            <img src="./images/pre-wedding/8.jpg" class="w-full h-auto" />
+                            <img src="./images/pre-wedding/9.jpg" class="w-full h-auto" />
+                            <img src="./images/pre-wedding/10.jpg" class="w-full h-auto" />
+                        </div>
+                    </div>
+                    <div class="bg-card p-4">
+                        <div class="grid grid-cols-1 gap-4">
+                            <img src="./images/pre-wedding/11.jpg" class="w-full h-auto" />
+                            <img src="./images/pre-wedding/12.jpg" class="w-full h-auto" />
+                            <img src="./images/pre-wedding/13.jpg" class="w-full h-auto" />
+                            <img src="./images/pre-wedding/14.jpg" class="w-full h-auto" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-4 bg-background">
+            <div class="container mx-auto text-center">
+                <h3 class="text-3xl font-semibold mb-6">HALDI CEREMONY BY ALPHAFILMS</h3>
+                <p class="text-muted-foreground mb-12 max-w-2xl mx-auto">
+                    Haldi ceremony in a wedding is a very emotional and joyful ritual. Family and friends gather to
+                    apply a paste of turmeric (haldi), sandalwood and rose water on the bride and groom. Yellow haldi
+                    symbolizes purity, blessings and protection from negative energy, while also giving a natural glow
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 mx-12">
+                    <div class="bg-card p-4">
+                        <div class="grid grid-cols-1 gap-5">
+                            <img src="./images/haldi-ceremony/0.jpg" class="w-full h-auto" />
+                            <img src="./images/haldi-ceremony/1.jpg" class="w-full h-auto" />
+                            <img src="./images/haldi-ceremony/2.jpg" class="w-full h-auto" />
+                            <img src="./images/haldi-ceremony/3.jpg" class="w-full h-auto" />
+                            <img src="./images/haldi-ceremony/4.jpg" class="w-full h-auto" />
+                        </div>
+                    </div>
+                    <div class="bg-card p-4">
+                        <div class="grid grid-cols-1 gap-4">
+                            <img src="./images/haldi-ceremony/5.jpg" class="w-full h-auto" />
+                            <img src="./images/haldi-ceremony/6.jpg" class="w-full h-auto" />
+                            <img src="./images/haldi-ceremony/7.jpg" class="w-full h-auto" />
+                            <img src="./images/haldi-ceremony/8.jpg" class="w-full h-auto" />
+                        </div>
+                    </div>
+                    <div class="bg-card p-4">
+                        <div class="grid grid-cols-1 gap-5">
+                            <img src="./images/haldi-ceremony/9.jpg" class="w-full h-auto" />
+                            <img src="./images/haldi-ceremony/10.jpg" class="w-full h-auto" />
+                            <img src="./images/haldi-ceremony/11.jpg" class="w-full h-auto" />
+                            <img src="./images/haldi-ceremony/12.jpg" class="w-full h-auto" />
+                            <img src="./images/haldi-ceremony/13.jpg" class="w-full h-auto" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-4 bg-background">
+            <div class="container mx-auto text-center">
+                <h3 class="text-3xl font-semibold mb-6">ALPHAFILMS COLLABS </h3>
+                <p class="text-muted-foreground mb-12 max-w-2xl mx-auto">
+                    captures more than just faces and fashion—it tells a story of confidence, style, and personality.
+                    Every shot is a moment frozen in time, where the model communicates an emotion, an attitude, or a
+                    lifestyle. Behind the lens, the photographer isn’t just taking a picture but crafting a narrative of
+                    elegance, strength, or beauty, depending on the theme.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 mx-12">
+                    <div class="bg-card p-4">
+                        <div class="grid grid-cols-1 gap-7">
+                            <img src="./images/collabs/1.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/2.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/3.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/4.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/5.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/6.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/7.jpg" class="w-full h-auto" />
+                        </div>
+                    </div>
+                    <div class="bg-card p-4">
+                        <div class="grid grid-cols-1 gap-6">
+                            <img src="./images/collabs/8.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/9.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/10.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/11.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/12.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/13.jpg" class="w-full h-auto" />
+                        </div>
+                    </div>
+                    <div class="bg-card p-4">
+                        <div class="grid grid-cols-1 gap-9">
+                            <img src="./images/collabs/14.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/15.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/16.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/17.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/18.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/19.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/20.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/21.jpg" class="w-full h-auto" />
+                            <img src="./images/collabs/22.jpg" class="w-full h-auto" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 300 X 300 -->
+        <section class="bg-background p-8 mt-5" id="teams">
+            <h2 class="text-3xl font-bold text-foreground text-center mb-8">Meet the Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+                <div
+                    class="bg-card p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl text-center">
+                    <img class="w-full h-48 object-cover rounded-lg" src="./images//teams//DivyeshGamit.jpg"
+                        alt="Divyesh Gamit" />
+                    <h3 class="text-xl font-semibold mt-4">Divyesh Gamit</h3>
+                    <p class="text-muted-foreground">Capture your essence with Divyesh Gamit. Our portrait
+                        photography
+                        focuses on bringing out your best self in a natural and compelling way.</p>
+                    <span class="text-muted-foreground">Founder, Cinematography & CEO</span>
+                </div>
+                <div
+                    class="bg-card p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl text-center">
+                    <img class="w-full h-48 object-cover rounded-lg" src="./images/teams/RahulGamit.jpg"
+                        alt="Rahul Gamit" />
+                    <h3 class="text-xl font-semibold mt-4">Rahul Gamit</h3>
+                    <p class="text-muted-foreground">Rahul Gamit is a skilled photographer renowned for his creative
+                        vision and ability to capture emotion in every shot.</p>
+                    <span class="text-muted-foreground">Photographer</span>
+                </div>
+                <div
+                    class="bg-card p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl text-center">
+                    <img class="w-full h-48 object-cover rounded-lg" src="./images/teams/RakeshGamit.jpg"
+                        alt="Rakesh Gamit" />
+                    <h3 class="text-xl font-semibold mt-4">Rakesh Gamit</h3>
+                    <p class="text-muted-foreground">Rakesh Gamit is a skilled traditional videographer known for
+                        his
+                        ability to capture authentic moments with precision and artistry.</p>
+                    <span class="text-muted-foreground">Traditional Videographer</span>
+                </div>
+                <div
+                    class="bg-card p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl text-center">
+                    <img class="w-full h-48 object-cover rounded-lg" src="./images/teams/AbhiGamit.jpg"
+                        alt="Abhi Gamit" />
+                    <h3 class="text-xl font-semibold mt-4">Abhi Gamit</h3>
+                    <p class="text-muted-foreground">Abhi Gamit is a professional photographer and editor known for
+                        his
+                        exceptional visual storytelling, stunning compositions, and innovative editing techniques.
+                    </p>
+                    <span class="text-muted-foreground">Photographer & Editor</span>
+                </div>
+                <div
+                    class="bg-card p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl text-center">
+                    <img class="w-full h-48 object-cover rounded-lg" src="./images/teams/MilanGamit.jpg"
+                        alt="Milan Gamit" />
+                    <h3 class="text-xl font-semibold mt-4">Milan Gamit</h3>
+                    <p class="text-muted-foreground">Capture your personality with stunning portraits by Milan
+                        Gamit. We
+                        focus on bringing out the best in you through precise lighting and expert composition.</p>
+                    <span class="text-muted-foreground">Member of Alpha Team</span>
+                </div>
+                <div
+                    class="bg-card p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl text-center">
+                    <img class="w-full h-48 object-cover rounded-lg" src="./images/teams/FilipGamit.JPG"
+                        alt="Filip Gamit" />
+                    <h3 class="text-xl font-semibold mt-4">Filip Gamit</h3>
+                    <p class="text-muted-foreground">Filip Gamit captures stunning and timeless portraits. We bring
+                        out
+                        the best in you with our expert techniques and personalized approach.</p>
+                    <span class="text-muted-foreground">Member of Alpha Team</span>
+                </div>
+            </div>
+        </section>
+
+        <div id="aboutus"
+            class="bg-gray-50 text-foreground dark:bg-primary dark:text-primary-foreground p-8 rounded-lg shadow-lg max-w-7xl mb-3 mx-auto flex flex-col md:flex-row">
+            <div class="md:w-1/2 md:pr-8">
+                <h2 class="text-4xl font-bold mb-6 text-center md:text-left">About Us</h2>
+                <p class="mb-4">
+                    As Photographer, we believe every moment
+                    is worth capturing. Located in the heart of India, our team of skilled photographers is
+                    dedicated to preserving your cherished memories with precision and care.
+                </p>
+                <p class="mb-6">
+                    We offer a range of photography services tailored to meet your needs. From weddings and events
+                    to
+                    portraits and commercial projects, our expertise ensures high-quality results. Let us tell your
+                    story through our lens.
+                </p>
+                <div class="p-4 bg-card rounded-lg shadow-md">
+                    <h2 class="text-lg font-semibold text-foreground">Dhamodi, Gujarat, India</h2>
+                    <p class="text-muted-foreground">View larger map</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d3597.0413899450864!2d73.45734746745038!3d21.069336100000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d21.068445999999998!2d73.4579346!4m3!3m2!1d21.068725099999998!2d73.4597169!5e1!3m2!1sen!2sin!4v1729410980674!5m2!1sen!2sin"
+                        width="470" height="250" style="border:0; display: block; margin: 0 auto;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 mt-8 md:mt-0">
+                <h3 class="text-3xl font-bold mb-4 text-center md:text-left">Contact us via WhatsApp.</h3>
+                <p class="mb-4 text-center md:text-left">Send us a message and we'll get back to you as soon as we
+                    can.
+                </p>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium" for="phone">Start a WhatsApp Chat</label>
+                        <input
+                            class="mt-1 block w-full border border-border dark:border-primary rounded-md p-3 focus:ring focus:ring-ring dark:focus:ring-primary transition"
+                            type="text" id="phone" placeholder="Divyesh Gamit" required autocomplete="off" disabled />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium" for="message">Message</label>
+                        <textarea
+                            class="mt-1 block w-full border border-border dark:border-primary rounded-md p-3 focus:ring focus:ring-ring dark:focus:ring-primary transition"
+                            id="message" rows="4" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button onclick="sendWhatsAppMessage(event)" type="submit"
+                        class="bg-secondary text-secondary-foreground hover:bg-secondary/80 dark:bg-primary dark:text-primary-foreground dark:hover:bg-primary/80 p-3 rounded-md w-full transition">
+                        Send
+                    </button>
+
+                </form>
+            </div>
+        </div>
+
+        <button
+            class="fixed bottom-4 right-4 bg-primary text-primary-foreground rounded-full w-12 h-12 flex items-center justify-center hover:bg-primary/80"
+            id="moveToTop">
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </button>
+        <footer class="bg-gradient-to-r from-zinc-800 to-zinc-900 text-white py-9 px-12 pt-5">
+            <div class="flex flex-col md:flex-row justify-between items-center container mx-auto">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <span class="text-4xl font-bold animate-pulse">α</span>
+                    <span class="ml-3 text-2xl font-semibold">alphafilms</span>
+                </div>
+                <div class="mb-2">
+                    <a href="https://www.facebook.com/divu.gamit.10?mibextid=ZbWKwL"
+                        class="text-primary-foreground hover:text-zinc-300" target="_blank">
+                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                    </a>
+                    &nbsp;
+                    <a href="https://www.instagram.com/mr_divu._?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        class="text-primary-foreground hover:text-zinc-300" target="_blank">
+                        <i class="fa fa-instagram" aria-hidden="true"></i> </a>
+                    &nbsp;
+                    <a href="tel:+919712082463" class="text-primary-foreground hover:text-zinc-300" target="_blank">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div>
+                    <span class="text-sm">Made with ❤️ <a href="http://keyurhalpati.in/"
+                            class="text-zinc-400 hover:text-zinc-300 transition duration-300" target="_blank">Keyur
+                            Halpati</a></span>
+                </div>
+
+            </div>
+            <!-- <div class="mt-6">
+                <svg class="w-full h-auto" viewBox="0 0 1440 320">
+                    <path fill="rgba(255, 255, 255, 0.1)"
+                        d="M0,128L30,133.3C60,139,120,149,180,160C240,171,300,181,360,192C420,203,480,213,540,186.7C600,160,660,96,720,74.7C780,53,840,75,900,101.3C960,128,1020,160,1080,170.7C1140,181,1200,171,1260,160C1320,149,1380,139,1410,133.3L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
+                    </path>
+                </svg>
+            </div> -->
+        </footer>
+    </div>
+
+    <!-- video play Button -->
+    <script>
+        const videoPlayer = document.getElementById('videoPlayer');
+        const playButton = document.getElementById('playButton');
+
+        // Play video and hide the play button when custom play button is clicked
+        playButton.addEventListener('click', () => {
+            videoPlayer.play();
+            playButton.classList.add('hidden');
+        });
+
+        // Show play button when the video is paused, regardless of how it's paused
+        videoPlayer.addEventListener('pause', () => {
+            playButton.classList.remove('hidden');
+        });
+
+        // Hide play button when the video is played, regardless of how it's played
+        videoPlayer.addEventListener('play', () => {
+            playButton.classList.add('hidden');
+        });
+
+        // Optional: Show play button when the video ends
+        videoPlayer.addEventListener('ended', () => {
+            playButton.classList.remove('hidden');
+        });
+    </script>
+
+    <!-- Script for Sliding Images -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider-img');
+
+        // Function to change slide
+        function showNextSlide() {
+            slides[currentSlide].classList.remove('opacity-100');
+            slides[currentSlide].classList.add('opacity-0');
+
+            currentSlide = (currentSlide + 1) % slides.length;
+
+            slides[currentSlide].classList.remove('opacity-0');
+            slides[currentSlide].classList.add('opacity-100');
+        }
+
+        setInterval(showNextSlide, 6000);
+        // Event listener to change slide when background is clicked
+        document.getElementById('slider-container').addEventListener('click', showNextSlide);
+
+        // Move to top functionality
+        document.getElementById('moveToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+    <script type='text/javascript'>
+        const lazyloadRunObserver = () => {
+            const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
+            const lazyloadBackgroundObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        let lazyloadBackground = entry.target;
+                        if (lazyloadBackground) {
+                            lazyloadBackground.classList.add('e-lazyloaded');
+                        }
+                        lazyloadBackgroundObserver.unobserve(entry.target);
+                    }
+                }
+                );
+            }
+                , {
+                    rootMargin: '200px 0px 200px 0px'
+                });
+            lazyloadBackgrounds.forEach((lazyloadBackground) => {
+                lazyloadBackgroundObserver.observe(lazyloadBackground);
+            }
+            );
+        }
+            ;
+        const events = ['DOMContentLoaded', 'elementor/lazyload/observe',];
+        events.forEach((event) => {
+            document.addEventListener(event, lazyloadRunObserver);
+        }
+        );
+    </script>
+
+    <script id="wpo_min-footer-0-js-extra">
+        var astra = {
+            "break_point": "921",
+            "isRtl": "",
+            "is_scroll_to_id": "",
+            "is_scroll_to_top": "",
+            "is_header_footer_builder_active": "1"
+        };
+        var starter_templates_zip_preview = {
+            "AstColorPaletteVarPrefix": "--ast-global-color-",
+            "AstEleColorPaletteVarPrefix": ["ast-global-color-0", "ast-global-color-1", "ast-global-color-2", "ast-global-color-3", "ast-global-color-4", "ast-global-color-5", "ast-global-color-6", "ast-global-color-7", "ast-global-color-8"]
+        };
+        var localize = {
+            "ajaxurl": "",
+            "nonce": "31b1e75c81",
+            "i18n": {
+                "added": "Added ",
+                "compare": "Compare",
+                "loading": "Loading..."
+            },
+            "eael_translate_text": {
+                "required_text": "is a required field",
+                "invalid_text": "Invalid",
+                "billing_text": "Billing",
+                "shipping_text": "Shipping",
+                "fg_mfp_counter_text": "of"
+            },
+            "page_permalink": "",
+            "cart_redirectition": "no",
+            "cart_page_url": "",
+            "el_breakpoints": {
+                "mobile": {
+                    "label": "Mobile Portrait",
+                    "value": 767,
+                    "default_value": 767,
+                    "direction": "max",
+                    "is_enabled": true
+                },
+                "mobile_extra": {
+                    "label": "Mobile Landscape",
+                    "value": 880,
+                    "default_value": 880,
+                    "direction": "max",
+                    "is_enabled": false
+                },
+                "tablet": {
+                    "label": "Tablet Portrait",
+                    "value": 1024,
+                    "default_value": 1024,
+                    "direction": "max",
+                    "is_enabled": true
+                },
+                "tablet_extra": {
+                    "label": "Tablet Landscape",
+                    "value": 1200,
+                    "default_value": 1200,
+                    "direction": "max",
+                    "is_enabled": false
+                },
+                "laptop": {
+                    "label": "Laptop",
+                    "value": 1366,
+                    "default_value": 1366,
+                    "direction": "max",
+                    "is_enabled": false
+                },
+                "widescreen": {
+                    "label": "Widescreen",
+                    "value": 2400,
+                    "default_value": 2400,
+                    "direction": "min",
+                    "is_enabled": false
+                }
+            }
+        };
+    </script>
+
+    <script src="https://shaadicam.in/wp-content/cache/wpo-minify/1721495446/assets/wpo-minify-footer-55c86cf0.min.js"
+        id="wpo_min-footer-0-js"></script>
+
+    <script src="https://shaadicam.in/wp-content/cache/wpo-minify/1721495446/assets/wpo-minify-footer-076e1979.min.js"
+        id="wpo_min-footer-1-js"></script>
+
+    <script data-cfasync="false">
+        var dFlipLocation = "https://shaadicam.in/wp-content/plugins/3d-flipbook-dflip-lite/assets/";
+        var dFlipWPGlobal = {
+            "text": {
+                "toggleSound": "Turn on\/off Sound",
+                "toggleThumbnails": "Toggle Thumbnails",
+                "toggleOutline": "Toggle Outline\/Bookmark",
+                "previousPage": "Previous Page",
+                "nextPage": "Next Page",
+                "toggleFullscreen": "Toggle Fullscreen",
+                "zoomIn": "Zoom In",
+                "zoomOut": "Zoom Out",
+                "toggleHelp": "Toggle Help",
+                "singlePageMode": "Single Page Mode",
+                "doublePageMode": "Double Page Mode",
+                "downloadPDFFile": "Download PDF File",
+                "gotoFirstPage": "Goto First Page",
+                "gotoLastPage": "Goto Last Page",
+                "share": "Share",
+                "mailSubject": "I wanted you to see this FlipBook",
+                "mailBody": "Check out this site {{url}}",
+                "loading": "DearFlip: Loading "
+            },
+            "moreControls": "download,pageMode,startPage,endPage,sound",
+            "hideControls": "",
+            "scrollWheel": "false",
+            "backgroundColor": "#777",
+            "backgroundImage": "",
+            "height": "auto",
+            "paddingLeft": "20",
+            "paddingRight": "20",
+            "controlsPosition": "bottom",
+            "duration": 800,
+            "soundEnable": "true",
+            "enableDownload": "true",
+            "showSearchControl": "false",
+            "showPrintControl": "false",
+            "enableAnnotation": false,
+            "enableAnalytics": "false",
+            "webgl": "true",
+            "hard": "none",
+            "maxTextureSize": "1600",
+            "rangeChunkSize": "524288",
+            "zoomRatio": 1.5,
+            "stiffness": 3,
+            "pageMode": "0",
+            "singlePageMode": "0",
+            "pageSize": "0",
+            "autoPlay": "false",
+            "autoPlayDuration": 5000,
+            "autoPlayStart": "false",
+            "linkTarget": "2",
+            "sharePrefix": "flipbook-"
+        };
+    </script>
+
+    <script>
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        document.onkeydown = function (e) {
+            // Disable F12
+            if (e.keyCode == 123) {
+                return false;
+            }
+            // Disable Ctrl+Shift+I
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                return false;
+            }
+            // Disable Ctrl+Shift+J (Console)
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                return false;
+            }
+            // Disable Ctrl+U (View Source)
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
